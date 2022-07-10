@@ -77,6 +77,7 @@ function About(props) {
                     </div>
                     <div className="presentation__text">
                         <p className='presentation__'>Je suis David Donnot, Développeur Web & Mobile, passionné par les nouvelles technologies et leurs facultés à améliorer la productivité des entreprises.</p>
+                        <p className='presentation__'>Je recherche un contrat d'alternance à compter du 12/09/2022 jusqu'au 20/10/2022</p>
                     </div>
 
                 </div>
