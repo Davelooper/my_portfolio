@@ -1,0 +1,84 @@
+@import "../variables"
+@import '../fonts'
+
+.navbar
+    background-color: $primary
+    height: 60px
+    display: flex
+    align-items: center
+    position: fixed
+    z-index: 100
+    width: 100vw
+
+    &__wrapper
+        width: 80%
+        display: flex
+        align-items: center
+        margin: 0 10% 0 10%
+        justify-content: space-between
+        &--d-none
+            display: none
+
+    &__logo
+        width: 15%
+
+    &__links
+        // min-width: 300px
+        width: 75%
+        display: flex
+        justify-content: space-around
+        color: $primary
+
+    &__button
+        background-color: white
+        border: none
+        height: 25px
+        background-color: $primary
+        font-size: 1.2rem
+        color: $secondary
+        font-weight: 600
+        font-family: $primaryFont
+        height: 40px
+        min-width: 100px
+        cursor: pointer
+        border-radius: 5px
+
+.network
+    width: 10%
+    display: flex
+    justify-content: space-between
+    cursor: pointer
+
+@media screen and (max-width: 768px)
+    .network
+        display: none
+    
+@media screen and (max-width: 576px)
+    .navbar
+        width: 100%
+        position: relative
+        &__links
+            position: absolute
+            display: flex
+            flex-direction: column
+            align-items: flex-end
+            background-color: $primary
+            width: fit-content
+            min-width: none
+            right: 10px
+            top: 60px
+        &__link
+            display: block
+        &__button
+            width: 150px
+        &__wrapper
+            &--d-none
+                display: flex
+                justify-content: flex-end
+                position: absolute
+                right: 20px
+                margin: 0
+
+        &__burger
+            width: 40px
+            cursor: pointer

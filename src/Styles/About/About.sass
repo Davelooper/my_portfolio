@@ -1,0 +1,90 @@
+@import '../variables'
+@import '../fonts'
+@import '../main'
+@import '../animations'
+
+.about
+    margin-bottom: 2em
+    &__title
+        color: $primary
+        text-align: center
+        font-family: $secondaryFont
+    &__frame
+        position: relative
+    &__presentation
+        display: flex
+        gap: 30px
+        font-family: $primaryFont
+        margin-bottom: 50px
+    
+    &__image
+        width: 250px
+    &__brush
+        opacity: 0
+        position: absolute
+        width: 100px
+        top: 165px
+        left: 27px
+        transition: opacity 0.2s
+        &--visible
+            opacity: 1
+            display: block
+            animation: 0.2s shaking 0.2s infinite
+    &__bright
+        position: absolute
+        width: 110px
+        top: 130px
+        left: 75px
+        opacity: 0
+        transition: opacity 10ms ease-in-out
+        z-index: 200
+        &--visible
+            opacity: 1
+
+    &__route
+        display: flex
+        gap: 20px
+    
+    &__button
+        margin: auto
+
+
+.formation
+    &__image
+        width: 50px
+
+.presentation
+    width: 100%
+    &__info
+        &--mt
+            margin-top: 0
+
+    &__text
+        margin-top: 50px
+        max-width: 700px
+
+
+.cv
+    margin: 50px 0 50px 0
+    &__link
+        text-decoration: none
+    &__button
+        margin: auto
+        border: 1px solid $tertiary
+
+@media screen and (max-width: 576px)
+    .about
+        &__presentation
+            display: block
+        &__route
+            display: block
+        &__frame
+            width: 250px
+            margin: auto
+    .presentation
+        &__wrapper
+            margin-top: 10px
+
+        
+
+        

@@ -1,0 +1,95 @@
+@import '../variables'
+@import '../fonts'
+@import '../main'
+@import '../animations'
+
+.overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    // filter: blur(4px)
+    backdrop-filter: blur(7px)
+    z-index: 10
+
+.project
+    width: 800px
+    max-width: 80%
+    margin: auto
+    background-color: white
+    max-height: 100%
+    height: 80%
+    z-index: 20
+    position: relative
+    padding: 20px
+    margin-top: 80px
+    border-radius: 10px
+    overflow-y: scroll
+    z-index: 20
+    &__title
+        text-align: center
+        margin-bottom: 10px
+        padding: 10px 0 10px 0
+        font-size: 1.8rem
+    &__carousel
+        margin: auto
+        max-width: 80%
+        width: 80%
+        margin-bottom: 50px
+    &__text
+        text-align: center
+        font-size: 1rem
+    &__subtitle
+        font-size: 1.5rem
+        margin: 30px auto
+    &__list
+        padding: 0
+    &__item
+        text-align: center
+        line-height: 2rem
+
+.slider
+    &__image
+        width: 100%
+        opacity: 1
+    &__next
+        right: -50px
+        position: absolute
+        top: 50%
+        padding: 0
+        transform: translate(0, -50%)
+        cursor: pointer
+        color: transparent
+        border: none
+        outline: none
+        background: transparent
+        &::before
+            font-family: 'slick'
+            font-size: 40px
+            line-height: 1
+            color: $primary
+            content: '→'
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+    &__prev
+        left: -50px
+        position: absolute
+        z-index: 100
+        top: 50%
+        padding: 0
+        transform: translate(0, -50%) rotate(180deg)
+        cursor: pointer
+        color: transparent
+        border: none
+        outline: none
+        background: transparent
+        &::before
+            font-family: 'slick'
+            font-size: 40px
+            line-height: 1
+            color: $primary
+            content: '→'
+            -webkit-font-smoothing: antialiased
+            -moz-osx-font-smoothing: grayscale
+

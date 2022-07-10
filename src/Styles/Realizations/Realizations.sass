@@ -1,0 +1,56 @@
+@import "../variables"
+@import '../fonts'
+
+.realizations
+    &__title
+        text-align: center
+    &__content
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 80px 30px
+        justify-items: center
+
+.realization
+    padding: 10px
+    cursor: pointer
+    border: 1px solid $tertiary
+    background-color: white
+    border-radius: 20px
+    transform: scale(1)
+    transition: transform 0.3s
+    max-width: 350px
+    &:hover
+        transform: scale(1.1)
+    &__title
+        text-align: center
+        color: $secondary
+        font-family: $secondaryFont
+        font-weight: 400
+    &__body
+        
+    &__frame
+        width: min-content
+        margin: auto
+        width: 100%
+    &__image
+        max-width: 100%
+    &__subtitle
+        text-align: center
+    &__text
+        text-align: center
+
+@media screen and (max-width: 768px) 
+    .realizations
+        &__content
+            grid-template-columns: repeat(2, 1fr)
+    
+@media screen and (max-width: 576px)
+    .realizations
+        &__content
+            display: block
+
+    .realization
+        margin-bottom: 30px
+        &--last
+            margin-bottom: 0
+            

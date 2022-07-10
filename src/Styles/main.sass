@@ -1,0 +1,150 @@
+@import './variables'
+
+body
+    overflow-x: hidden
+
+h1
+    font-size: 2.5rem
+    text-align: center
+
+h2
+    color: $primary
+    font-size: 2.2rem
+    font-family: $secondaryFont
+    margin: 0
+    padding: 2em 0 2em 0
+    text-align: center
+    font-weight: 500
+
+h3
+    color: $primary
+    font-size: 1.8rem
+    font-family: $secondaryFont
+    text-align: center
+    font-weight: 400
+
+
+h4
+    color: $secondary
+    font-family: $secondaryFont
+
+
+p, span, strong
+    font-family: $primaryFont
+    font-size: 1.1rem
+    
+p
+    font-weight: 300
+hr
+        border: 1px solid $tertiary
+        margin: 0
+
+li
+    font-family: $primaryFont
+
+ul
+    list-style: none
+
+button
+    display: block
+    // border: 1px solid #FEDC2A
+    border-radius: 5px
+    height: 30px
+    background-color: $tertiary
+    transform: scale(1)
+    transition: transform 0.2s ease-in-out
+    cursor: pointer
+    font-family: "BoosterNextFY"
+    background-color: white
+    &:hover
+        transform: scale(1.1)
+
+a
+    text-decoration: none
+
+*::-webkit-scrollbar 
+  width: 8px
+
+
+*::-webkit-scrollbar-track 
+  background: rgb(0, 0, 0, 0)
+
+
+*::-webkit-scrollbar-thumb 
+  background-color: $primary
+  border-radius: 6px
+
+
+.container
+    margin: 0 10% 0 10%
+    background-color: #f3f3f3
+    padding: 0 30px
+
+.strong
+    color: black
+    &--blue
+        color: $secondary
+.card
+    flex: 1 1 0
+    padding: 0 20px 0 20px
+    &__title
+        text-align: center
+
+    &__header
+        display: flex
+        width: 100%
+        align-items: center
+        justify-content: center
+    &__body
+        display: flex
+        flex-direction: column
+    &__wrapper
+        display: flex
+        margin-bottom: 20px
+        align-items: center
+        &--center
+            align-self: center
+        &--mt
+            margin-top: 10px
+    &__frame
+        margin-left: 20px
+
+    &__image
+        width: 50px
+        &--small
+            width: 30px
+
+    &__text
+        text-align: center
+    &__logo
+        text-align: center
+        max-width: 150px
+        margin-right: 20px
+        &--no-mr
+            margin-right: 0
+    &__picture
+        max-width: 150px
+        width: 50px
+    &__subtitle
+        align-self: center
+        margin-bottom: 0
+        font-size: 1.2rem
+
+.strong
+    &--primary
+        color: $primary
+
+.divider
+    background: repeating-linear-gradient(-45deg,hsla(0,0%,100%,0),hsla(0,0%,100%,0) 6px,$tertiary 0,$tertiary 8px)
+    height: 12px
+    margin: 4em auto
+    position: relative
+    width: 80%
+
+@media screen and (max-width: 768px) 
+    .container
+        margin: 0
+    .card
+        margin-bottom: 30px
+        
+        

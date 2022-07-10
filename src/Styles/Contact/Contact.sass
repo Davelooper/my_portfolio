@@ -1,0 +1,59 @@
+@import '../variables'
+@import '../fonts'
+@import '../main'
+
+.contact
+    padding-bottom: 50px
+
+    &__content
+        background-color: white
+        padding: 40px
+        border-radius: 10px
+    &__subtitle
+            text-align: left
+            margin-bottom: 0
+            font-weight: 400
+    &__wrapper
+        width: fit-content
+    &__text
+        margin-bottom: 50px
+        // text-align: center
+        margin-top: 5px
+        color: $primary
+.form
+    display: flex
+    width: 80%
+    margin: auto
+    justify-content: space-around
+    gap: 50px
+    &__section
+        margin: auto
+    &__button
+        border: 1px solid $tertiary
+        &:hover
+            transform: scale(1.1)
+            background-color: white
+    &__wrapper
+        margin-bottom: 50px
+    &__label
+        display: block
+        text-align: center
+        margin-bottom: 20px
+        padding-left: 5px
+        font-family: $primaryFont
+        text-align: left
+    &__input
+        min-height: 25px
+        border-radius: 5px
+        border: 1px solid $primary
+        min-width: 200px
+        &--textarea
+            min-height: 100px
+        &:focus
+            outline: none 
+            border: 1px solid $secondary
+    
+@media screen and (max-width: 576px)
+    .form
+        display: block
+    
